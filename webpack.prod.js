@@ -4,6 +4,7 @@ const {merge} = require('webpack-merge'),
 //TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = merge(common, {
+  mode: 'production',
   entry: './index.js',
   output: {
     path: __dirname + '/dist/',
