@@ -1,6 +1,6 @@
 {
   "name": "react-chrome-tabs",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "react chrome tabs",
   "main": "dist/bundle.js",
   "scripts": {
