@@ -9,6 +9,6 @@ let tabs = [
 ]
 
 render(
-  <App defaultTabs={tabs} />
+  <App />
   , document.getElementById('root')
 )

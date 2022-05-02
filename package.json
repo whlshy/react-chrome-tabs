@@ -1,12 +1,16 @@
 {
   "name": "react-chrome-tabs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "react chrome tabs",
   "main": "dist/bundle.js",
   "scripts": {
     "start": "webpack-dev-server --open --progress --config webpack.dev.js",
     "build": "webpack --progress --config webpack.prod.js",
     "web": "webpack --progress --config webpack.web.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whlshy/react-chrome-tabs.git"
   },
   "author": "WHL",
   "license": "MIT",
