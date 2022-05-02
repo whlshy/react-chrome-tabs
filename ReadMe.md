@@ -33,3 +33,16 @@ render(
     , document.getElementById('root')
 )
 ```
+
+## PROPS & METHODS
+
+|Prop name|Type|Default|Description|
+|---|---|---|---|
+|className|string|||
+|dark|bool|`false`||
+|defaultCurrent|string|||
+|defaultTabs|array|`[]`|分頁陣列 e.g. `[{"favicion": "url", "title": "title"}]`|
+|onChange|func|`(tabs) => {}`||
+|onClick|func|`(id) => {}`||
+|onClose|func|`(id) => {}`||
+|style|object|`{}`|| 

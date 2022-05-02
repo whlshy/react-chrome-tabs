@@ -1,6 +1,6 @@
 {
   "name": "react-chrome-tabs",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "react chrome tabs",
   "main": "dist/bundle.js",
   "scripts": {
@@ -23,9 +23,6 @@
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-router": "^6.3.0",
     "@babel/core": "^7.17.10",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/preset-env": "^7.17.10",
@@ -34,11 +31,21 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router": "^6.3.0",
     "style-loader": "^3.3.1",
     "stylus-loader": "^6.2.0",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1",
     "webpack-merge": "^5.8.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "chrome",
+    "tabs",
+    "chrome-tabs",
+    "node"
+  ]
 }
