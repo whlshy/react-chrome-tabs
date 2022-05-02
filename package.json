@@ -1,6 +1,6 @@
 {
   "name": "react-chrome-tabs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react chrome tabs",
   "main": "dist/bundle.js",
   "scripts": {
@@ -10,6 +10,11 @@
   },
   "author": "WHL",
   "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-css-modules": "^4.7.11"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
@@ -19,9 +24,6 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
-    "prop-types": "^15.8.1",
-    "react": "^18.1.0",
-    "react-css-modules": "^4.7.11",
     "react-dom": "^18.1.0",
     "react-router": "^6.3.0",
     "style-loader": "^3.3.1",
