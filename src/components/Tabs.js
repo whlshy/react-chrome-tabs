@@ -22,10 +22,6 @@ function Tabs(props) {
 	const TAB_CONTENT_MAX_WIDTH = 240
 
 	useEffect(() => {
-		// console.log(positions)
-	})
-
-	useEffect(() => {
 		setTabContentWidths(getContentWidths());
 		setPositions(tabContentPositions(getContentWidths()));
 		window.addEventListener('resize', handleResize);
@@ -42,7 +38,6 @@ function Tabs(props) {
 
 	useEffect(() => {
 		tabs != defaultTabs && setTabs(defaultTabs);
-		// tabs != defaultTabs && console.log('default tabs', tabs, defaultTabs)
 	}, [defaultTabs]);
 
 	useEffect(() => {
@@ -276,8 +271,6 @@ const Tab = (props) => {
 			active={active !== false ? "" : null} is-small={contentWidth < TAB_SIZE_SMALL ? "" : null}
 			is-smaller={contentWidth < TAB_SIZE_SMALLER ? "" : null} is-mini={contentWidth < TAB_SIZE_MINI ? "" : null}
 			// draggable={true}
-			onPointerDown={e => (onClick(e))}
-			onMouseDown={onDragStart}
 			// onMouseMove={onDragMove}
 			// onMouseUp={onDragEnd}
 			ref={tabEl}
@@ -301,7 +294,7 @@ const Tab = (props) => {
 			<div className="whl_tab-content">
 				{!!favicon && <div className="whl_tab-favicon" style={{ "backgroundImage": `url(${favicon})` }}></div>}
 				<div className="whl_tab-title">{title}</div>
-				<div className="whl_tab-drag-handle" title={title} onClick={onClick} ></div>
+				<div className="whl_tab-drag-handle" title={title} onClick={onClick} onPointerDown={e => (onClick(e))} onMouseDown={onDragStart}></div>
 				<div className="whl_tab-close" onClick={onClose}></div>
 			</div>
 		</div>

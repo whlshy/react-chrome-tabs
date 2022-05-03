@@ -1,6 +1,6 @@
 {
   "name": "react-chrome-tabs",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "react chrome tabs",
   "main": "dist/bundle.js",
   "scripts": {
@@ -31,8 +31,8 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-router": "^6.3.0",
     "style-loader": "^3.3.1",
     "stylus-loader": "^6.2.0",

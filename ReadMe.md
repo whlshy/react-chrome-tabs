@@ -8,6 +8,14 @@ React Chrome Tabs 是基於 [adamschwartz](https://github.com/adamschwartz) 的 
 
 ## Install
 
+#### 必要套件
+
+* `react`: >=16.8.0
+* `react-dom`: >=16.8.0
+* `prop-types`: ^15.8.1
+
+#### Install React Chrome Tabs
+
 ```
 npm i react-chrome-tabs --save
 ```
