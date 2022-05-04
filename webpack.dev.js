@@ -8,7 +8,7 @@ const path = require('path');
 module.exports = merge(common, {
   entry: './src/start.js',
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: {
     host: "localhost",
     port: 7777,

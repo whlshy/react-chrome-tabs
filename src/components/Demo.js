@@ -4,9 +4,9 @@ import '../style/Demo.css'
 
 export default function Demo(props) {
   const [tabs, setTabs] = useState([
-    { id: 0, favicon: "https://www.google.com/favicon.ico", title: "Google" },
-    { id: 1, favicon: "https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico", title: "Facebook" },
-    { id: 2, favicon: "https://it108.wke.csie.ncnu.edu.tw/edu.ico", title: "IT Technology" }
+    { key: 0, favicon: "https://www.google.com/favicon.ico", title: "Google" },
+    { key: 1, favicon: "https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico", title: "Facebook" },
+    { key: 2, favicon: "https://it108.wke.csie.ncnu.edu.tw/edu.ico", title: "IT Technology" }
   ])
   const [dark, setDark] = useState(false)
   const [id, setID] = useState(2)

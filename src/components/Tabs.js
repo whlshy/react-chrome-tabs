@@ -137,19 +137,19 @@ function Tabs(props) {
 						tabs.map((m, index) =>
 							!!positions[index] &&
 							<Tab
-								key={m.id}
+								key={m.key}
 								favicon={m.favicon}
 								title={m.title}
-								active={active === m.id}
+								active={active === m.key}
 								position={positions[index]}
 								contentWidth={tabContentWidths[index]}
-								onClick={e => (setActive(m.id), onClick(m.id))}
-								onClose={e => closeTab(m.id)}
+								onClick={e => (setActive(m.key), onClick(m.key))}
+								onClose={e => closeTab(m.key)}
 								setDragging={setDragging}
 								tabsContentWidth={tabContentEl.current && tabContentEl.current.clientWidth}
 								animateTabMove={p => animateTabMove(p, index)}
 								isDragging={isDragging}
-								id={m.id}
+								id={m.key}
 								index={index}
 								sorting={sorting}
 							/>)

@@ -28,9 +28,9 @@ import { render } from 'react-dom'
 import ChromeTabs from 'react-chrome-tabs'
 
 let tabs = [
-  { id: 0, favicon: "https://raw.githubusercontent.com/adamschwartz/chrome-tabs/gh-pages/demo/images/google-favicon.ico", title: "Google" },
-  { id: 1, favicon: "https://raw.githubusercontent.com/adamschwartz/chrome-tabs/gh-pages/demo/images/facebook-favicon.ico", title: "Facebook" },
-  { id: 2, favicon: "https://it108.wke.csie.ncnu.edu.tw/edu.ico", title: "IT Technology" }
+  { key: 0, favicon: "https://raw.githubusercontent.com/adamschwartz/chrome-tabs/gh-pages/demo/images/google-favicon.ico", title: "Google" },
+  { key: 1, favicon: "https://raw.githubusercontent.com/adamschwartz/chrome-tabs/gh-pages/demo/images/facebook-favicon.ico", title: "Facebook" },
+  { key: 2, favicon: "https://it108.wke.csie.ncnu.edu.tw/edu.ico", title: "IT Technology" }
 ]
 
 render(
@@ -48,9 +48,9 @@ render(
 |---|---|---|---|
 |className|string|||
 |dark|bool|`false`||
-|defaultCurrent|string|||
-|defaultTabs|array|`[]`|分頁陣列 e.g. `[{id: "num or str", "favicion": "url", "title": "title"}]`|
+|defaultCurrent|number|||
+|defaultTabs|array|`[]`|分頁陣列 e.g. `[{key: "num or str", "favicion": "url", "title": "title"}]`|
 |onChange|func|`(tabs) => {}`||
-|onClick|func|`(id) => {}`||
-|onClose|func|`(id) => {}`||
+|onClick|func|`(key) => {}`||
+|onClose|func|`(key) => {}`||
 |style|object|`{}`|| 
