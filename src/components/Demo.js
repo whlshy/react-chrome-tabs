@@ -36,11 +36,12 @@ export default function Demo(props) {
       <div className='surface'>
         <div className="mock-browser">
           <Tabs
-            defaultTabs={tabs}
+            currentTabs={tabs}
             dark={dark}
             defaultCurrent={current}
             onClick={key => setCurrent(key)}
             onClose={key => onClose(key)}
+            onChange={tabs => setTabs(tabs)}
           />
           <div className="chrome-tabs-optional-shadow-below-bottom-bar"></div>
           <div className="mock-browser-content">

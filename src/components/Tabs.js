@@ -4,11 +4,11 @@ import CSSModules from 'react-css-modules';
 import propTypes from 'prop-types';
 
 function Tabs(props) {
-	const { defaultTabs, onChange, defaultCurrent, onClose, className, style, dark, onClick } = props;
+	const { currentTabs, onChange, defaultCurrent, onClose, className, style, dark, onClick } = props;
 	const [active, setActive] = useState(0);
 	const [tabContentWidths, setTabContentWidths] = useState([]);
 	const [positions, setPositions] = useState(0);
-	const [tabs, setTabs] = useState(defaultTabs);
+	const [tabs, setTabs] = useState(currentTabs || []);
 	const [sorting, setSorting] = useState(false);
 	const [isDragging, setDragging] = useState(false);
 	const tabContentEl = useRef(null);
@@ -35,10 +35,9 @@ function Tabs(props) {
 		handleResize();
 	}, [tabs]);
 
-
 	useEffect(() => {
-		tabs != defaultTabs && setTabs(defaultTabs);
-	}, [defaultTabs]);
+		!!currentTabs && setTabs(currentTabs);
+	}, [currentTabs]);
 
 	useEffect(() => {
 		active != defaultCurrent && setActive(defaultCurrent);
@@ -114,7 +113,7 @@ function Tabs(props) {
 				}
 			})
 			
-			checkIndex(tabsDrag) && setTabs(tabsDrag)
+			checkIndex(tabsDrag) && onChange(tabsDrag)
 		}
 		setSorting(false)
 	}
@@ -124,7 +123,7 @@ function Tabs(props) {
 	}
 
 	const closeTab = (idx) => {
-		!!onClose ? onClose(idx) : setTabs(tabs.filter((m, index) => index != idx))
+		!!onClose ? onClose(idx) : onChange(tabs.filter((m, index) => index != idx))
 	}
 	return (
 		<div className={className} style={style}>
@@ -134,7 +133,7 @@ function Tabs(props) {
 			>
 				<div className={`whl_tabs_content`} ref={tabContentEl} >
 					{
-						tabs.map((m, index) =>
+						!!tabs && tabs.map((m, index) =>
 							!!positions[index] &&
 							<Tab
 								key={m.key}

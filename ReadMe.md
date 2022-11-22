@@ -23,20 +23,20 @@ npm i react-chrome-tabs --save
 ## Usage
 
 ```jsx
-import React from 'react'
+import React, { useState } from 'react'
 import { render } from 'react-dom'
 import ChromeTabs from 'react-chrome-tabs'
 
-let tabs = [
+let [tabs, setTabs] = useState([
   { key: 0, favicon: "https://raw.githubusercontent.com/adamschwartz/chrome-tabs/gh-pages/demo/images/google-favicon.ico", title: "Google" },
   { key: 1, favicon: "https://raw.githubusercontent.com/adamschwartz/chrome-tabs/gh-pages/demo/images/facebook-favicon.ico", title: "Facebook" },
   { key: 2, favicon: "https://it108.wke.csie.ncnu.edu.tw/edu.ico", title: "IT Technology" }
-]
+])
 
 render(
     <ChromeTabs 
-      defaultTabs={tabs}
-      onChange={tabs => console.log(tabs)}
+      currentTabs={tabs}
+      onChange={tabs => setTabs(tabs)}
     />
     , document.getElementById('root')
 )
@@ -49,8 +49,14 @@ render(
 |className|string|||
 |dark|bool|`false`||
 |defaultCurrent|number|||
-|defaultTabs|array|`[]`|分頁陣列 e.g. `[{key: "num or str", "favicion": "url", "title": "title"}]`|
+|currentTabs|array|`[]`|分頁陣列 e.g. `[{key: "num or str", "favicion": "url", "title": "title"}]`|
 |onChange|func|`(tabs) => {}`||
 |onClick|func|`(key) => {}`||
 |onClose|func|`(key) => {}`||
 |style|object|`{}`|| 
+
+# Change Log
+
+## 2.0.0
+- defaultTabs => currentTabs
+- 內部component不再控制tabs (都由onChange傳到外層變化currentTabs)
