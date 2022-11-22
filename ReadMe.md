@@ -57,6 +57,6 @@ render(
 
 # Change Log
 
-## 2.0.0
+## 2.0.1
 - defaultTabs => currentTabs
 - 內部component不再控制tabs (都由onChange傳到外層變化currentTabs)

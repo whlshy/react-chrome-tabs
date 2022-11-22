@@ -31,7 +31,6 @@ function Tabs(props) {
 	}, []);
 
 	useEffect(() => {
-		!!onChange && onChange(tabs);
 		handleResize();
 	}, [tabs]);
 
